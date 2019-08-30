@@ -7,6 +7,7 @@ collections:
       - donnola-che-fa-la-doccia
       - gorilla-lisergico
       - materiali-vivi
+      - annegamento
 
 defaults:
   - scope:
