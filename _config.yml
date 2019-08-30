@@ -1,0 +1,15 @@
+
+collections:
+  banchi:
+    output: true
+    permalink: /:name
+    order:
+      - donnola-che-si-fa-la-doccia.md
+      - gorilla
+
+defaults:
+  - scope:
+      path: ""
+      type: "banchi"
+    values:
+      layout: banco

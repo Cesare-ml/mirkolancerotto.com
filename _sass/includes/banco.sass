@@ -1,0 +1,22 @@
+
+.gallery
+  overflow-x: scroll
+  overflow-y: hidden
+  display: flex
+  align-items: flex-start
+  .image
+    position: relative
+    margin-right: 1rem
+    img
+      max-width: 98vw
+      max-height: 98vh
+
+@include media('<tablet')
+  .gallery.vertical-on-mobile
+    display: flex
+    flex-wrap: wrap
+    .image
+      margin: 0
+      img
+        width: 100%
+        max-width: 100%

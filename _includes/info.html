@@ -1,0 +1,28 @@
+
+<div id="info-wrapper" class="bg-light">
+  <div class="container pt-4">
+    <div class="row">
+      <div class="col">
+        <span class="display-3">About<span>
+      </div>
+      <div class="col text-right">
+        <div id="info-close-trigger">
+          <i class="fas fa-times fa-3x"></i>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <ul class="list-unstyled">
+          {% for banco in site.banchi %}
+            <li>
+              <a href="{{banco.url}}" class="btn btn-link">
+                {{banco.title}}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
