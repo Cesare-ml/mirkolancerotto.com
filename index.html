@@ -2,33 +2,183 @@
 layout: default
 ---
 
-<div id="atf" class="container-fluid p-0">
-  <a href="#projects">
-    <div class="img"></div>
-  </a>
-</div>
-
 <div id="menu-wrapper">
   <div class="website-heading">
-    <img class="logo" src="/assets/images/logo.jpg"/>
-    <h1>Restalabile Collective</h1>
+    <h1>Mirko Lancerotto</h1>
   </div>
   <div class="menu-wrapper">
     <ul class="menu">
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#about-us">About us</a></li>
-      <li><a href="#exhibitions">Exhibitions</a></li>
-      <li><a href="#contacts">Contacts</a></li>
+      <li><a href="#dipinti">Dipinti</a></li>
+      <li><a href="#disegni">Disegni</a></li>
+      <li><a href="#foto">Foto</a></li>
+      <li><a href="#video-arte">Video Arte</a></li>
+      <li><a href="#musica">Musica</a></li>
+      <li><a href="#contatti">Contatti</a></li>
     </ul>
   </div>
 </div>
 
+<!-- Dipinti -->
 
+<div class="container-fluid">
+  <div class="row no-gutters">
+    <div class="col-12">
+      <span class="anchor" id="dipinti"></span>
+      <div id="dipinti" class="section carousel">
+        <h2>Dipinti</h2>
+
+        <div class="carousel-inner">
+          {% for x in site.data.dipinti %}
+            {% assign url = "/assets/images/dipinti/" | append: x.id %}
+            {% include post-preview-card2.html imgurl = url %}
+          {% endfor %}
+        </div>
+
+        <div id="bottom-panel">
+          <div class="carousel-arrows">
+            <button class="slick-prev slick-arrow" aria-label="Previous">
+              <i class="fas fa-long-arrow-alt-left"></i>
+            </button>
+            <button class="slick-next slick-arrow" aria-label="Next">
+              <i class="fas fa-long-arrow-alt-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Disegni -->
+
+<div class="container-fluid">
+  <div class="row no-gutters">
+    <div class="col-12">
+      <span class="anchor" id="disegni"></span>
+      <div id="disegni" class="section carousel">
+        <h2>Disegni</h2>
+
+        <div class="carousel-inner">
+          {% for x in site.data.disegni %}
+            {% assign url = "/assets/images/disegni/" | append: x.id %}
+            {% include post-preview-card2.html imgurl = url %}
+          {% endfor %}
+        </div>
+
+        <div id="bottom-panel">
+          <div class="carousel-arrows">
+            <button class="slick-prev slick-arrow" aria-label="Previous">
+              <i class="fas fa-long-arrow-alt-left"></i>
+            </button>
+            <button class="slick-next slick-arrow" aria-label="Next">
+              <i class="fas fa-long-arrow-alt-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Foto -->
+
+<div class="container-fluid">
+  <div class="row no-gutters">
+    <div class="col-12">
+      <span class="anchor" id="foto"></span>
+      <div id="foto" class="section carousel">
+        <h2>Foto</h2>
+
+        <div class="carousel-inner">
+          {% for x in site.data.foto %}
+            {% assign url = "/assets/images/foto/" | append: x.id %}
+            {% include post-preview-card2.html imgurl = url %}
+          {% endfor %}
+        </div>
+
+        <div id="bottom-panel">
+          <div class="carousel-arrows">
+            <button class="slick-prev slick-arrow" aria-label="Previous">
+              <i class="fas fa-long-arrow-alt-left"></i>
+            </button>
+            <button class="slick-next slick-arrow" aria-label="Next">
+              <i class="fas fa-long-arrow-alt-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+
+      <span class="anchor" id="video-arte"></span>
+      <div id="videoarte" class="section">
+        <h2>Video Arte</h2>
+        <p>
+          Trovi i miei lavori di video arte sul mio canale YouTube e sul sito del Collettivo Restalabile.
+          <ul>
+            <li><a href="https://www.youtube.com/channel/UCo98FFrz3pWo--rlr0PAe1A">https://www.youtube.com/channel/UCo98FFrz3pWo--rlr0PAe1A</a></li>
+            <li><a href="https://labile.red">https://labile.red</a></li>
+          </ul>
+
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+
+      <span class="anchor" id="musica"></span>
+      <div id="musica" class="section">
+        <h2>Musica</h2>
+        <p>
+          Trovi i miei brani e le mie sperimentazione sonore sia su Spotify che su Youtube.
+          <ul>
+            <li><a href="https://open.spotify.com/artist/6zXwY7pla4R7M1GsJbW1QE?si=NwRM-BuZQQenECjfM0AgoA">https://open.spotify.com/artist/6zXwY7pla4R7M1GsJbW1QE?si=NwRM-BuZQQenECjfM0AgoA</a></li>
+            <li><a href="https://www.youtube.com/channel/UCo98FFrz3pWo--rlr0PAe1A">https://www.youtube.com/channel/UCo98FFrz3pWo--rlr0PAe1A</a></li>
+          </ul>
+
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+
+      <span class="anchor" id="contacts"></span>
+      <div id="contacts-section" class="section">
+        <h2>Contattami</h2>
+        <p>
+          Possiamo organizzare mostre e performance; trovare un occasione per incontrarci a suonare
+          o parlare d'arte; prenotare dei ritratti o anche degli scatti fotografici. <br>
+          In ogni caso scrivimi per e-mail: <a href="mailto:mirko@mirkolancerotto.com">mirko@mirkolancerotto.com</a>, rispondo sempre. <br>
+          Rimango aperto a qualsiasi genere di proposta creativa.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!--
 <div class="container">
   <span class="anchor" id="projects"></span>
   <div id="projects-section" class="section">
     <h2>Our amazing projects</h2>
-    <!-- Quel fior di gonna & Il gran cucito -->
     <div class="project">
       <img class="cover" src="/assets/images/quel-fior-di-gonna-cover.png"/>
       <img class="cover" src="/assets/images/il-gran-cucito-cover.png"/>
@@ -94,3 +244,4 @@ layout: default
     </p>
   </div>
 </div>
+-->

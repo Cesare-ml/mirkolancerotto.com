@@ -1,0 +1,106 @@
+
+.section.carousel
+  //padding-top: 40px
+  //padding-bottom: 100px
+
+  .slick-list
+    padding: 0 6% 0 0
+  .slick-arrow
+    display: none
+
+  h2
+    text-align: center
+    font-weight: 800
+    margin-top: 20px
+  #bottom-panel
+    padding: 30px 50px
+    align-items: center
+    display: flex
+    justify-content: center
+
+    .carousel-arrows
+      display: inline-block
+      .slick-arrow
+        border: 0
+        font-size: 37px
+        padding: 0px 30px
+        background: transparent
+        color: black
+        border-radius: 34px
+        cursor: pointer
+
+        &:focus
+          outline: 0
+
+        &.slick-prev
+          i
+            right: 0
+          &::after
+            display: none
+        &.slick-next
+          i
+            left: 0
+          &::before
+            display: none
+
+        i
+          position: relative
+          opacity: 1
+          transition: 0.1s ease-in-out opacity,left,right
+
+        &::after,&::before
+          content: " "
+          width: 45px
+          height: 45px
+          border: 2px solid black
+          border-radius: 50%
+          display: inline-block
+          /* transform: translateY(-50%); */
+          position: relative
+          top: 7px
+          transition: 0.3s cubic-bezier(0, 0, 0.28, 1.01) background
+        &::after
+          margin-left: -30px
+        &::before
+          margin-right: -30px
+
+
+        &:hover
+          &.slick-prev i
+            right: 5px
+          &.slick-next i
+            left: 5px
+          i
+            opacity: 0
+          &::after,&::before
+            background: black
+
+    #cta
+      font-weight: 600
+      color: black
+      text-transform: uppercase
+      border: 2px solid black
+      border-left: 0
+      border-right: 0
+      padding: 5px 15px
+      font-size: 20px
+      border-radius: 0
+      transition: 0.1s ease-in-out background
+      &:hover
+        text-decoration: none
+        background: black
+        color: white
+
+@include media("<tablet")
+  .section.carousel
+    padding-bottom: 50px
+    .slick-list
+      padding: 0 10% 0 0
+    #bottom-panel
+      padding: 10px 10px
+      justify-content: flex-end
+      .carousel-arrows
+        display: none
+      #cta
+        font-size: 20px
+        margin-top: 15px
